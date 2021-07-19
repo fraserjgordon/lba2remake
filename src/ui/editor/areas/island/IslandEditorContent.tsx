@@ -373,7 +373,7 @@ function handleMouseEvent(controlsState, event) {
 async function exportIsland(islandObject: THREE.Object3D) {
     const palette = await getPalette();
     const objToExport = islandObject.clone(true);
-    const namesToRemove = ['Rain', 'Sea', 'Clouds', 'Lightning'];
+    const namesToRemove = ['Rain', 'Sea', 'Clouds', 'GroundClouds', 'Stars', 'Lightning'];
     const toRemove = [];
     objToExport.traverse((node) => {
         if (namesToRemove.includes(node.name)) {
